@@ -1,0 +1,52 @@
+<section class="section-block">
+  <div class="section-shell max-w-3xl">
+    <div class="mb-6">
+      <%= link_to "← Back to inquiries", admin_inquiries_path, class: "text-sm font-medium text-slate-700 hover:text-slate-900" %>
+    </div>
+
+    <div class="card space-y-4">
+      <h1 class="text-3xl font-bold text-slate-900"><%= @inquiry.name %></h1>
+      <p class="text-sm text-slate-600"><%= @inquiry.created_at.strftime("%B %-d, %Y at %-I:%M %p") %></p>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Email</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.email %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Company</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.company.presence || "-" %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Phone</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.phone.presence || "-" %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Source Page</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.source_page %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Project Type</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.project_type.presence || "-" %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Budget</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.budget.presence || "-" %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Timeline</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.timeline.presence || "-" %></p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</p>
+          <p class="mt-1 text-slate-900"><%= @inquiry.status %></p>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Message</p>
+        <p class="mt-2 whitespace-pre-line text-slate-900"><%= @inquiry.message %></p>
+      </div>
+    </div>
+  </div>
+</section>

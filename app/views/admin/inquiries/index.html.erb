@@ -1,0 +1,31 @@
+<section class="section-block">
+  <div class="section-shell">
+    <h1 class="text-3xl font-bold text-slate-900">Inquiries</h1>
+    <p class="mt-2 text-sm text-slate-600"><%= @inquiries.count %> total</p>
+
+    <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
+      <table class="min-w-full divide-y divide-slate-200 text-sm">
+        <thead class="bg-slate-50">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold text-slate-700">Name</th>
+            <th class="px-4 py-3 text-left font-semibold text-slate-700">Email</th>
+            <th class="px-4 py-3 text-left font-semibold text-slate-700">Project</th>
+            <th class="px-4 py-3 text-left font-semibold text-slate-700">Status</th>
+            <th class="px-4 py-3 text-left font-semibold text-slate-700">Submitted</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <% @inquiries.each do |inquiry| %>
+            <tr class="hover:bg-slate-50">
+              <td class="px-4 py-3"><%= link_to inquiry.name, admin_inquiry_path(inquiry), class: "font-medium text-slate-900" %></td>
+              <td class="px-4 py-3"><%= inquiry.email %></td>
+              <td class="px-4 py-3"><%= inquiry.project_type.presence || "-" %></td>
+              <td class="px-4 py-3"><%= inquiry.status %></td>
+              <td class="px-4 py-3"><%= inquiry.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

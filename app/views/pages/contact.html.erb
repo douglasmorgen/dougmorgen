@@ -1,0 +1,23 @@
+<% content_for :meta_title, "Contact Doug Morgen | Fractional CTO and Software Consulting" %>
+<% content_for :meta_description, "Contact Doug Morgen about fractional CTO support, Rails applications, Shopify systems, internal tools, automation, API integrations, and data workflows." %>
+
+<section class="section-block">
+  <div class="section-shell max-w-3xl">
+    <h1 class="text-4xl font-bold text-slate-900 sm:text-5xl">Contact</h1>
+    <p class="mt-4 text-lg text-slate-700">The fastest way to connect is the project inquiry form.</p>
+
+    <div class="mt-8 grid gap-5 sm:grid-cols-2">
+      <div class="card">
+        <h2 class="text-lg font-bold text-slate-900">Start Here</h2>
+        <p class="mt-3 text-slate-700">Share what you're building, fixing, or automating and I'll follow up.</p>
+        <%= link_to "Go to /start", start_project_path, class: "btn-primary mt-5" %>
+      </div>
+
+      <div class="card">
+        <h2 class="text-lg font-bold text-slate-900">LinkedIn</h2>
+        <p class="mt-3 text-slate-700">You can also connect on LinkedIn.</p>
+        <%= link_to linkedin_url, linkedin_url, target: "_blank", rel: "noopener", class: "mt-4 inline-block text-slate-900 underline decoration-slate-300 hover:decoration-slate-600" %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,6 +5,25 @@ if ! gem list foreman -i --silent; then
   gem install foreman
 fi
 
+REDIS_URL="${REDIS_URL:-redis://127.0.0.1:6379/0}"
+
+if command -v redis-cli >/dev/null 2>&1 && redis-cli -u "$REDIS_URL" ping >/dev/null 2>&1; then
+  echo "Redis is already running at $REDIS_URL"
+else
+  if ! command -v redis-server >/dev/null 2>&1; then
+    echo "Redis is not installed. Install it with: brew install redis"
+    exit 1
+  fi
+
+  echo "Starting Redis for local development without persistence..."
+  redis-server \
+    --save "" \
+    --appendonly no \
+    --dir /tmp \
+    --dbfilename dougmorgen_dev.rdb \
+    --daemonize yes
+fi
+
 # Default to port 3000 if not specified
 export PORT="${PORT:-3000}"
 

@@ -1,0 +1,114 @@
+<% content_for :meta_title, "Start a Project with Doug Morgen | Fractional CTO and Rails Consultant" %>
+<% content_for :meta_description, "Tell Doug Morgen what you're trying to build, fix, or automate. Fractional CTO and consulting support for Rails, Shopify, internal tools, API integrations, and operations software." %>
+
+<section class="section-block">
+  <div class="section-shell">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1fr]">
+      <div>
+        <h1 class="text-4xl font-bold text-slate-900 sm:text-5xl">Tell me what you're trying to build, fix, or automate.</h1>
+        <p class="mt-5 text-lg text-slate-700">I work with founders, SMBs, e-commerce teams, and operations-heavy businesses that need practical software shipped fast.</p>
+
+        <div class="mt-8 space-y-5">
+          <div class="card">
+            <h2 class="text-lg font-bold text-slate-900">Who this is for</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>Teams that need a fractional or half-time CTO without a full-time hire</li>
+              <li>Teams replacing manual processes and spreadsheet workflows</li>
+              <li>Founders needing product + engineering execution without heavy overhead</li>
+              <li>Operators with integration, automation, or data workflow bottlenecks</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="text-lg font-bold text-slate-900">Common projects</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>Rails apps and feature delivery</li>
+              <li>Shopify / e-commerce systems</li>
+              <li>Internal tools, API integrations, and dashboards</li>
+              <li>Data imports and cleanup workflows</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="text-lg font-bold text-slate-900">What happens next</h2>
+            <ol class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>1. I review your inquiry.</li>
+              <li>2. We decide if this is best as project-based, fractional CTO, or half-time CTO support.</li>
+              <li>3. If it's a fit, we scope and start quickly.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="text-2xl font-bold text-slate-900">Project Inquiry</h2>
+
+        <% if @inquiry.errors.any? %>
+          <div class="mt-4 rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">
+            <p class="font-semibold">Please fix the following:</p>
+            <ul class="mt-2 list-disc pl-5">
+              <% @inquiry.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <%= form_with model: @inquiry, url: inquiries_path, class: "mt-6 space-y-4" do |f| %>
+          <div>
+            <%= f.label :name, "Name", class: "field-label" %>
+            <%= f.text_field :name, class: "field-input", required: true %>
+          </div>
+
+          <div>
+            <%= f.label :email, "Email", class: "field-label" %>
+            <%= f.email_field :email, class: "field-input", required: true %>
+          </div>
+
+          <div>
+            <%= f.label :company, "Company", class: "field-label" %>
+            <%= f.text_field :company, class: "field-input" %>
+          </div>
+
+          <div>
+            <%= f.label :phone, "Phone (optional)", class: "field-label" %>
+            <%= f.telephone_field :phone, class: "field-input" %>
+          </div>
+
+          <div>
+            <%= f.label :project_type, "Project type", class: "field-label" %>
+            <%= f.select :project_type, Inquiry::PROJECT_TYPES, { include_blank: "Select project type" }, class: "field-input" %>
+          </div>
+
+          <div>
+            <%= f.label :budget, "Budget", class: "field-label" %>
+            <%= f.select :budget, Inquiry::BUDGETS, { include_blank: "Select budget" }, class: "field-input" %>
+          </div>
+
+          <div>
+            <%= f.label :timeline, "Timeline", class: "field-label" %>
+            <%= f.select :timeline, Inquiry::TIMELINES, { include_blank: "Select timeline" }, class: "field-input" %>
+          </div>
+
+          <div>
+            <%= f.label :message, "Message", class: "field-label" %>
+            <%= f.text_area :message, class: "field-input min-h-32", required: true %>
+          </div>
+
+          <div class="hidden" aria-hidden="true">
+            <%= f.label :honeypot, "Leave this field blank" %>
+            <%= f.text_field :honeypot, tabindex: "-1", autocomplete: "off" %>
+          </div>
+
+          <%= f.hidden_field :source_page, value: @inquiry.source_page.presence || "/start" %>
+          <%= hidden_field_tag :form_started_at, @form_started_at %>
+          <%= hidden_field_tag :form_signature, @form_signature %>
+
+          <div>
+            <%= f.submit "Send inquiry", class: "btn-primary w-full sm:w-auto" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

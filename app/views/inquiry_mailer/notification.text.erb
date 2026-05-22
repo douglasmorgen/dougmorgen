@@ -1,0 +1,14 @@
+New inquiry submitted
+
+Name: <%= @inquiry.name %>
+Email: <%= @inquiry.email %>
+Company: <%= @inquiry.company.presence || "-" %>
+Phone: <%= @inquiry.phone.presence || "-" %>
+Project type: <%= @inquiry.project_type.presence || "-" %>
+Budget: <%= @inquiry.budget.presence || "-" %>
+Timeline: <%= @inquiry.timeline.presence || "-" %>
+Source page: <%= @inquiry.source_page %>
+Status: <%= @inquiry.status %>
+
+Message:
+<%= @inquiry.message %>

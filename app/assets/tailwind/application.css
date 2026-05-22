@@ -1,1 +1,132 @@
 @import "tailwindcss";
+
+:root {
+  --page: #f3f4f6;
+  --ink: #1f2937;
+  --brand: #2563eb;
+  --paper: #ffffff;
+}
+
+.site-shell {
+  font-family: "Manrope", "Inter var", "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.12), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(99, 102, 241, 0.12), transparent 30%),
+    var(--page);
+}
+
+.bg-ivory {
+  background-color: var(--page);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sora", "Manrope", "Inter var", "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.section-block {
+  margin-bottom: 3rem;
+}
+
+.section-shell {
+  margin-inline: auto;
+  max-width: 72rem;
+}
+
+.card,
+.surface-card {
+  border: 1px solid rgb(226 232 240 / 0.85);
+  border-radius: 1.25rem;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.06);
+  padding: 1.5rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: rgb(37 99 235 / 0.12);
+  color: rgb(30 64 175);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand);
+  color: rgb(255 255 255);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: rgb(29 78 216);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(148 163 184);
+  border-radius: 9999px;
+  color: rgb(51 65 85);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  transition: border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgb(51 65 85);
+  background: rgb(248 250 252);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(51 65 85);
+  margin-bottom: 0.4rem;
+}
+
+.field-input {
+  width: 100%;
+  border: 1px solid rgb(203 213 225);
+  border-radius: 0.75rem;
+  background: white;
+  color: rgb(15 23 42);
+  padding: 0.7rem 0.85rem;
+}
+
+.field-input:focus {
+  border-color: rgb(37 99 235);
+  box-shadow: 0 0 0 3px rgb(147 197 253 / 0.4);
+  outline: none;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 0.45s ease-out both;
+}

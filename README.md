@@ -1,24 +1,68 @@
-# README
+# dougmorgen.com (Rails 8 + Tailwind)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Personal consulting site for Doug Morgen with high-conversion lead capture at `/start`.
 
-Things you may want to cover:
+## Stack
 
-* Ruby version
+- Ruby 3.4.9
+- Rails 8.1
+- Tailwind CSS
+- PostgreSQL
+- RSpec
+- High Voltage (static pages)
+- Kamal + Docker deployment
 
-* System dependencies
+## Pages
 
-* Configuration
+- `/` Home
+- `/services`
+- `/work`
+- `/about`
+- `/blog`
+- `/resume`
+- `/contact`
+- `/start` Lead generation form
+- `/start/thanks` Inquiry success page
+- `/admin/inquiries` Admin-lite inquiry listing (HTTP basic auth)
 
-* Database creation
+## Setup
 
-* Database initialization
+```bash
+asdf exec bundle install
+asdf exec ruby bin/rails db:create db:migrate
+asdf exec ruby bin/dev
+```
 
-* How to run the test suite
+## Environment Variables
 
-* Services (job queues, cache servers, search engines, etc.)
+### Inquiry + Admin
 
-* Deployment instructions
+- `INQUIRY_NOTIFICATION_EMAIL`
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `MAILER_FROM` (optional, defaults to `dougmorgen.com <no-reply@dougmorgen.com>`)
 
-* ...
+### SMTP (production)
+
+- `SMTP_ADDRESS`
+- `SMTP_PORT`
+- `SMTP_DOMAIN`
+- `SMTP_USERNAME`
+- `SMTP_PASSWORD`
+
+## Testing
+
+```bash
+asdf exec bundle exec rspec
+```
+
+## Deploy (Kamal)
+
+1. Ensure `config/deploy.yml` values are correct.
+2. Set secrets for Kamal (`RAILS_MASTER_KEY` + env vars above).
+3. Deploy:
+
+```bash
+bin/kamal setup
+bin/kamal deploy
+```

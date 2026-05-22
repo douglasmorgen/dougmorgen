@@ -1,0 +1,14 @@
+<h1>New inquiry submitted</h1>
+
+<p><strong>Name:</strong> <%= @inquiry.name %></p>
+<p><strong>Email:</strong> <%= @inquiry.email %></p>
+<p><strong>Company:</strong> <%= @inquiry.company.presence || "-" %></p>
+<p><strong>Phone:</strong> <%= @inquiry.phone.presence || "-" %></p>
+<p><strong>Project type:</strong> <%= @inquiry.project_type.presence || "-" %></p>
+<p><strong>Budget:</strong> <%= @inquiry.budget.presence || "-" %></p>
+<p><strong>Timeline:</strong> <%= @inquiry.timeline.presence || "-" %></p>
+<p><strong>Source page:</strong> <%= @inquiry.source_page %></p>
+<p><strong>Status:</strong> <%= @inquiry.status %></p>
+
+<h2>Message</h2>
+<p style="white-space: pre-line;"><%= @inquiry.message %></p>
