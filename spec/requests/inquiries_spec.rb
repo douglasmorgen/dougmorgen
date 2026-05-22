@@ -25,15 +25,18 @@ RSpec.describe 'Inquiries', type: :request do
       }
     end
 
-    it 'creates an inquiry, sends an email, and redirects to thank-you' do
+    it 'creates an inquiry, sends admin + requester emails, and redirects to thank-you' do
       expect do
         expect do
           post inquiries_path, params: valid_params
-        end.to change(ActionMailer::Base.deliveries, :count).by(1)
+        end.to change(ActionMailer::Base.deliveries, :count).by(2)
       end.to change(Inquiry, :count).by(1)
 
       expect(response).to redirect_to(inquiry_thank_you_path)
       expect(Inquiry.last.status).to eq('new')
+      recipients = ActionMailer::Base.deliveries.flat_map(&:to)
+      expect(recipients).to include('doug@example.com')
+      expect(recipients).to include(ENV.fetch('INQUIRY_NOTIFICATION_EMAIL', 'inquiries@dougmorgen.com'))
     end
 
     it 'rejects spam submissions when honeypot is filled' do

@@ -25,6 +25,7 @@ class InquiriesController < ApplicationController
       render_inquiry_form_error(status: :unprocessable_content)
     elsif @inquiry.save
       InquiryMailer.notification(@inquiry).deliver_now
+      InquiryMailer.confirmation(@inquiry).deliver_now
       redirect_to inquiry_thank_you_path
     else
       render_inquiry_form_error(status: :unprocessable_content)
