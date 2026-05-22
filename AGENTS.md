@@ -123,3 +123,9 @@ Before opening or merging a PR, confirm:
 ## Git Workflow
 
 - Never run `git commit` (or create commits) from the agent.
+
+## Deploy Workflow
+
+- Never run deploy commands from the agent.
+- Specifically, do not run `kamal deploy`, `kamal setup`, or any command that pushes/releases to production.
+- The user performs all deploy actions manually.
