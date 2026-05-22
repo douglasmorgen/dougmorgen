@@ -72,6 +72,7 @@ Follow these rules unless the user explicitly asks otherwise.
 ## Testing and Verification
 
 - Add or update specs for behavior changes.
+- Always fix specs alongside code changes in the same task. Do not leave known failing or outdated specs behind.
 - Run targeted specs for changed areas before finishing.
 - Do not claim behavior without verification when tests can check it.
 
@@ -98,6 +99,7 @@ Before opening or merging a PR, confirm:
 - Migrations are reversible, with explicit `up`/`down` when `change` is not safely reversible.
 - Any extraction/pipeline changes keep schema small and explicit.
 - Relevant specs were added/updated for behavior changes.
+- Specs were updated in lockstep with code changes (no deferred spec fixes).
 - Targeted tests were run and pass.
 
 # AGENTS
