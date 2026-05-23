@@ -28,7 +28,7 @@ module ApplicationHelper
       "@type" => "Person",
       name: "Doug Morgen",
       url: "https://dougmorgen.com",
-      sameAs: [linkedin_url],
+      sameAs: [ linkedin_url ],
       jobTitle: "Fractional CTO and Senior Software Engineer",
       description: "Fractional CTO, half-time CTO, and Rails consultant for founders, SMBs, e-commerce companies, and operations-heavy teams.",
       knowsAbout: [
