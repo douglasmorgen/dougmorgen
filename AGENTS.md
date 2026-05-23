@@ -1,4 +1,4 @@
-# Homebrand Rails Conventions
+# dougmorgen.com Rails Conventions
 
 This file is the source of truth for code style and architecture decisions in this repo.
 Follow these rules unless the user explicitly asks otherwise.
@@ -114,11 +114,6 @@ Before opening or merging a PR, confirm:
   - silent rescue-based fallback that switches to alternate extraction logic.
 - LLM code paths must be single-path and deterministic based on explicit configuration.
 - If the configured LLM path fails, surface the failure state instead of routing to fallback parsing logic.
-
-## Receipt Parsing Ownership
-
-- Use `ArrafundReceipts::*` services as the canonical receipt ingestion path for this codebase.
-- Do not introduce dependencies on Homebrand/Homebrand Alpha receipt parsing code or shared fallback parser paths.
 
 ## Git Workflow
 

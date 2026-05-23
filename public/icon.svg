@@ -1,3 +1,16 @@
-<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="256" cy="256" r="256" fill="red"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="472" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="132" y1="132" x2="380" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#93C5FD" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg)"/>
+  <rect x="96" y="96" width="320" height="320" rx="72" fill="url(#spark)"/>
+  <path d="M156 168H218C260 168 286 194 286 238V274C286 318 260 344 218 344H156V168ZM205 301C225 301 236 290 236 270V242C236 222 225 211 205 211H202V301H205Z" fill="white"/>
+  <path d="M305 344V168H355C398 168 424 194 424 238V344H374V240C374 221 364 211 346 211H355V344H305Z" fill="white"/>
 </svg>

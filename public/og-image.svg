@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="64" x2="1120" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 120) rotate(121) scale(540 540)">
+      <stop stop-color="#60A5FA" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" rx="24" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="1152" height="582" rx="20" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1152" height="582" rx="20" fill="url(#glow)"/>
+
+  <rect x="84" y="86" width="112" height="112" rx="28" fill="#1D4ED8"/>
+  <text x="140" y="157" text-anchor="middle" fill="white" font-family="Sora, Manrope, Arial, sans-serif" font-size="48" font-weight="700">DM</text>
+
+  <text x="84" y="288" fill="white" font-family="Sora, Manrope, Arial, sans-serif" font-size="62" font-weight="700">Doug Morgen</text>
+  <text x="84" y="350" fill="#BFDBFE" font-family="Manrope, Arial, sans-serif" font-size="36" font-weight="600">Fractional CTO + Senior Rails Engineer</text>
+
+  <text x="84" y="436" fill="#E2E8F0" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="500">Rails apps • Shopify systems • Internal tools • Automations</text>
+  <text x="84" y="486" fill="#E2E8F0" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="500">API integrations • Data workflows • Practical software shipped fast</text>
+
+  <rect x="84" y="526" width="348" height="52" rx="26" fill="#2563EB"/>
+  <text x="258" y="560" text-anchor="middle" fill="white" font-family="Manrope, Arial, sans-serif" font-size="26" font-weight="700">dougmorgen.com</text>
+</svg>

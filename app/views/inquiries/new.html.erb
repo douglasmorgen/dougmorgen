@@ -4,7 +4,7 @@
 <section class="section-block">
   <div class="section-shell">
     <div class="grid gap-10 lg:grid-cols-[1fr_1fr]">
-      <div>
+      <div class="order-2 lg:order-1">
         <h1 class="text-4xl font-bold text-slate-900 sm:text-5xl">Tell me what you're trying to build, fix, or automate.</h1>
         <p class="mt-5 text-lg text-slate-700">I work with founders, SMBs, e-commerce teams, and operations-heavy businesses that need practical software shipped fast.</p>
 
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="order-1 card lg:order-2">
         <h2 class="text-2xl font-bold text-slate-900">Project Inquiry</h2>
 
         <% if @inquiry.errors.any? %>

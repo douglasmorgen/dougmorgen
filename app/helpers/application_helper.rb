@@ -14,6 +14,14 @@ module ApplicationHelper
     "https://dougmorgen.com#{path}"
   end
 
+  def og_image_url
+    "https://dougmorgen.com/og-image.jpg?v=20260522b"
+  end
+
+  def og_image_alt
+    "Doug Morgen, Fractional CTO and Senior Rails Engineer"
+  end
+
   def person_structured_data_json
     {
       "@context" => "https://schema.org",
