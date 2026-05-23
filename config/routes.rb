@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get :work, to: "high_voltage/pages#show", id: "work"
   get :about, to: "high_voltage/pages#show", id: "about"
   get :blog, to: "high_voltage/pages#show", id: "blog"
+  get :faq, to: "high_voltage/pages#show", id: "faq"
   get :resume, to: "high_voltage/pages#show", id: "resume"
   get :contact, to: "high_voltage/pages#show", id: "contact"
 

@@ -21,6 +21,10 @@ RSpec.describe 'Routes', type: :routing do
     expect(get: '/blog').to route_to(controller: 'high_voltage/pages', action: 'show', id: 'blog')
   end
 
+  it 'routes faq to high voltage page' do
+    expect(get: '/faq').to route_to(controller: 'high_voltage/pages', action: 'show', id: 'faq')
+  end
+
   it 'routes resume to high voltage page' do
     expect(get: '/resume').to route_to(controller: 'high_voltage/pages', action: 'show', id: 'resume')
   end
