@@ -11,8 +11,8 @@ class InquiriesController < ApplicationController
   def new
     @inquiry = Inquiry.new(source_page: request.path)
     set_meta(
-      title: "Start a Project",
-      description: "Tell me what you're trying to build, fix, or automate."
+      title: "Ask Doug Morgen About Automation or Software Work",
+      description: "Tell Doug Morgen about your SMB automation, Rails, Shopify, internal tools, API integration, data workflow, or technical leadership problem."
     )
     set_form_protection_values
   end
@@ -34,8 +34,8 @@ class InquiriesController < ApplicationController
 
   def thank_you
     set_meta(
-      title: "Thanks",
-      description: "Thanks for your inquiry. You'll hear back soon."
+      title: "Thanks for reaching out to Doug Morgen",
+      description: "Your message was sent to Doug Morgen."
     )
   end
 
@@ -64,8 +64,8 @@ class InquiriesController < ApplicationController
 
   def render_inquiry_form_error(status:)
     set_meta(
-      title: "Start a Project",
-      description: "Tell me what you're trying to build, fix, or automate."
+      title: "Ask Doug Morgen About Automation or Software Work",
+      description: "Tell Doug Morgen about your SMB automation, Rails, Shopify, internal tools, API integration, data workflow, or technical leadership problem."
     )
     set_form_protection_values
     render :new, status: status

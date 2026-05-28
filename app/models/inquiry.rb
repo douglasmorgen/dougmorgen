@@ -1,11 +1,13 @@
 class Inquiry < ApplicationRecord
   PROJECT_TYPES = [
+    "Business process automation",
+    "Operations workflow",
     "Rails app",
     "Shopify / e-commerce",
     "Internal tool",
-    "Automation",
-    "Data import / cleanup",
     "API integration",
+    "Data import / cleanup",
+    "Ongoing technical leadership",
     "Not sure yet"
   ].freeze
 

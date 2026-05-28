@@ -1,12 +1,14 @@
+<% content_for :meta_robots, "noindex,follow" %>
+
 <section class="section-block">
   <div class="section-shell max-w-3xl">
     <div class="card">
-      <p class="pill">Inquiry sent</p>
-      <h1 class="mt-4 text-4xl font-bold text-slate-900">Thanks. I got your message.</h1>
-      <p class="mt-4 text-lg text-slate-700">I'll review your inquiry and follow up soon with the next best step.</p>
+      <p class="pill">Message sent</p>
+      <h1 class="mt-4 text-4xl font-bold text-slate-900">Thanks. I got your details.</h1>
+      <p class="mt-4 text-lg text-slate-700">I will review the context and follow up with the next practical step.</p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <%= link_to "Back to home", root_path, class: "btn-secondary" %>
-        <%= link_to "View work", work_path, class: "btn-primary" %>
+        <%= link_to "View case studies", work_path, class: "btn-primary" %>
       </div>
     </div>
   </div>

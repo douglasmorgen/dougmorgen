@@ -1,25 +1,50 @@
-<% content_for :meta_title, "About Doug Morgen | Fractional CTO and Senior Software Engineer" %>
-<% content_for :meta_description, "Doug Morgen is a fractional CTO, half-time CTO, and senior software engineer focused on practical Rails, Shopify, and operations systems." %>
+<% content_for :meta_title, "About Doug Morgen, SMB Automation and Rails Consultant" %>
+<% content_for :meta_description, "Doug Morgen helps SMBs, founders, and e-commerce teams build practical software, automate operations, connect systems, and ship Rails and Shopify work." %>
 
 <section class="section-block">
-  <div class="section-shell max-w-4xl">
-    <h1 class="text-4xl font-bold text-slate-900 sm:text-5xl">About</h1>
-    <p class="mt-6 text-lg leading-relaxed text-slate-700">I'm Doug Morgen, a senior software engineer, former founder, and fractional CTO focused on practical systems that help teams operate better. I typically work as a fractional CTO, half-time CTO, or senior consultant depending on stage and urgency.</p>
+  <div class="section-shell">
+    <div class="hero-grid">
+      <div class="rise-in">
+        <p class="pill">About Doug Morgen</p>
+        <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">A hands-on software partner for practical businesses.</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">I am a senior software engineer and former founder who helps SMBs, e-commerce operators, and lean teams automate work and build systems that make the business run better.</p>
+        <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-700">My lane is the useful middle: enough technical leadership to make good decisions, enough hands-on implementation to ship, and enough operator context to care about the business result.</p>
 
-    <div class="mt-8 grid gap-5 sm:grid-cols-2">
-      <div class="card">
-        <h2 class="text-lg font-bold text-slate-900">How I Work</h2>
-        <p class="mt-3 text-slate-700">Clear scope, direct communication, and high-leverage iteration. I lead technical strategy and stay hands-on to ship meaningful outcomes quickly.</p>
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <%= link_to "View work", work_path, class: "btn-secondary" %>
+          <%= link_to "Connect on LinkedIn", linkedin_url, target: "_blank", rel: "noopener", class: "btn-secondary" %>
+        </div>
       </div>
-      <div class="card">
-        <h2 class="text-lg font-bold text-slate-900">Where I Add Leverage</h2>
-        <p class="mt-3 text-slate-700">Rails architecture, Shopify-connected systems, accounting/ops migrations, product execution, and internal tooling that removes operational friction.</p>
+
+      <div class="rise-in">
+        <%= render "inquiries/quick_form", intro: "If your operations need better software, send the context. I will tell you where I can be useful." %>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-      <%= link_to "LinkedIn", linkedin_url, target: "_blank", rel: "noopener", class: "btn-secondary" %>
-      <%= link_to "Start a project", start_project_path, class: "btn-primary" %>
+<section class="section-block pt-0">
+  <div class="section-shell">
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">How I work</h2>
+        <p class="mt-3 text-slate-700">Clear scope, direct communication, and high-leverage iteration. I like simple systems, explicit tradeoffs, and code that a small team can keep owning.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Where I add leverage</h2>
+        <p class="mt-3 text-slate-700">Workflow automation, Rails architecture, Shopify-connected operations, accounting and data migrations, product execution, internal tooling, and API integrations.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Who tends to be a fit</h2>
+        <p class="mt-3 text-slate-700">SMBs, founders, and e-commerce teams with real operational pain, a willingness to make decisions, and a preference for useful shipped software over ceremony.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">What I am not</h2>
+        <p class="mt-3 text-slate-700">I am not a slide-deck-only advisor or an agency account layer. If I am involved, I expect the work to get clearer and move.</p>
+      </article>
     </div>
   </div>
 </section>

@@ -2,11 +2,15 @@ module ApplicationHelper
   LINKEDIN_URL = "https://www.linkedin.com/in/dougmorgen/".freeze
 
   def meta_title
-    content_for(:meta_title).presence || @meta_title.presence || "Doug Morgen | Fractional CTO and Senior Rails Engineer"
+    content_for(:meta_title).presence || @meta_title.presence || "Doug Morgen | SMB Automation and Rails Consultant"
   end
 
   def meta_description
-    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen is a fractional CTO and senior software engineer building Rails apps, Shopify systems, internal tools, automations, API integrations, dashboards, and data workflows."
+    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and replace manual operations with practical software."
+  end
+
+  def meta_robots
+    content_for(:meta_robots).presence || "index,follow,max-image-preview:large"
   end
 
   def canonical_url
@@ -19,7 +23,7 @@ module ApplicationHelper
   end
 
   def og_image_alt
-    "Doug Morgen, Fractional CTO and Senior Rails Engineer"
+    "Doug Morgen, SMB automation consultant and senior Rails engineer"
   end
 
   def person_structured_data_json
@@ -29,9 +33,11 @@ module ApplicationHelper
       name: "Doug Morgen",
       url: "https://dougmorgen.com",
       sameAs: [ linkedin_url ],
-      jobTitle: "Fractional CTO and Senior Software Engineer",
-      description: "Fractional CTO, half-time CTO, and Rails consultant for founders, SMBs, e-commerce companies, and operations-heavy teams.",
+      jobTitle: "SMB Automation Consultant and Senior Rails Engineer",
+      description: "Software consultant, automation partner, senior Rails engineer, and ongoing technical partner for SMBs, founders, e-commerce companies, and operations-heavy teams.",
       knowsAbout: [
+        "Business process automation",
+        "SMB operations software",
         "Ruby on Rails",
         "Shopify",
         "E-commerce systems",
@@ -40,13 +46,21 @@ module ApplicationHelper
         "API integrations",
         "Data imports and cleanup",
         "Dashboards",
-        "Accounting migrations"
+        "Accounting migrations",
+        "Ongoing technical leadership"
       ]
     }.to_json
   end
 
   def linkedin_url
     LINKEDIN_URL
+  end
+
+  def inquiry_form_timing_values
+    started_at = Time.current.to_i
+    signature = Rails.application.message_verifier(:inquiry_form).generate(started_at, purpose: :inquiry_form_timing)
+
+    [ started_at, signature ]
   end
 
   def nav_link_to(label, path)

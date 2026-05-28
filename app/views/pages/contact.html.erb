@@ -1,22 +1,29 @@
-<% content_for :meta_title, "Contact Doug Morgen | Fractional CTO and Software Consulting" %>
-<% content_for :meta_description, "Contact Doug Morgen about fractional CTO support, Rails applications, Shopify systems, internal tools, automation, API integrations, and data workflows." %>
+<% content_for :meta_title, "Talk to Doug Morgen About Automation or Software Work" %>
+<% content_for :meta_description, "Contact Doug Morgen for SMB automation, Rails consulting, Shopify systems, internal tools, API integrations, data workflows, and practical technical leadership." %>
 
 <section class="section-block">
-  <div class="section-shell max-w-3xl">
-    <h1 class="text-4xl font-bold text-slate-900 sm:text-5xl">Contact</h1>
-    <p class="mt-4 text-lg text-slate-700">The fastest way to connect is the project inquiry form.</p>
+  <div class="section-shell">
+    <div class="hero-grid">
+      <div class="rise-in">
+        <p class="pill">Talk through a bottleneck</p>
+        <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Tell me what is slowing the business down.</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">Use the form to share the workflow, system, data problem, integration, or software decision that needs attention. I review each message personally and reply with the clearest next step.</p>
+        <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-700">Good fits include SMB automation, Rails applications, Shopify systems, internal tools, API integrations, data workflows, and practical technical leadership.</p>
 
-    <div class="mt-8 grid gap-5 sm:grid-cols-2">
-      <div class="card">
-        <h2 class="text-lg font-bold text-slate-900">Start Here</h2>
-        <p class="mt-3 text-slate-700">Share what you're building, fixing, or automating and I'll follow up.</p>
-        <%= link_to "Go to /start", start_project_path, class: "btn-primary mt-5" %>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <p class="font-semibold text-slate-900">Prefer LinkedIn?</p>
+            <%= link_to "Connect with me", linkedin_url, target: "_blank", rel: "noopener", class: "mt-3 inline-block text-sm font-semibold text-blue-700 underline decoration-slate-300 hover:text-blue-800" %>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <p class="font-semibold text-slate-900">Not sure what to ask?</p>
+            <%= link_to "Read the FAQ", faq_path, class: "mt-3 inline-block text-sm font-semibold text-blue-700 underline decoration-slate-300 hover:text-blue-800" %>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h2 class="text-lg font-bold text-slate-900">LinkedIn</h2>
-        <p class="mt-3 text-slate-700">You can also connect on LinkedIn.</p>
-        <%= link_to linkedin_url, linkedin_url, target: "_blank", rel: "noopener", class: "mt-4 inline-block text-slate-900 underline decoration-slate-300 hover:decoration-slate-600" %>
+      <div class="rise-in">
+        <%= render "inquiries/quick_form", intro: "A few sentences are enough. Describe the goal, current workflow, and what happens if this stays stuck." %>
       </div>
     </div>
   </div>

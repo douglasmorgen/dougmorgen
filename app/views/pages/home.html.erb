@@ -1,42 +1,38 @@
-<% content_for :meta_title, "Doug Morgen | Fractional CTO and Rails Consultant" %>
-<% content_for :meta_description, "Doug Morgen is a fractional CTO and senior Rails consultant building Shopify systems, internal tools, workflow automations, API integrations, and data workflows." %>
+<% content_for :meta_title, "SMB Automation, Rails, and Shopify Consultant | Doug Morgen" %>
+<% content_for :meta_description, "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and replace manual operations." %>
 
 <section class="section-block">
   <div class="section-shell">
-    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <div class="hero-grid">
       <div class="rise-in">
-        <p class="mb-5 inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700">Rails Engineer + Fractional CTO</p>
-        <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">I build the software your business actually needs.</h1>
-        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-700">Rails apps, Shopify systems, internal tools, automations, and data workflows for founders and operators who need useful software shipped fast.</p>
-        <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-700">I'm Doug Morgen, a fractional CTO and senior software engineer helping teams replace manual processes with practical systems that hold up in production.</p>
-        <p class="mt-3 max-w-2xl text-sm font-medium text-slate-600">Recent builds include Homebrand, ArraFund, and large-scale accounting migrations with penny-perfect ledger reconciliation.</p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <%= link_to "Start a project", start_project_path, class: "btn-primary" %>
-          <%= link_to "View work", work_path, class: "btn-secondary" %>
+        <p class="pill">SMB automation + practical software</p>
+        <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">I help businesses fix messy workflows with software that actually ships.</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">I work with SMBs, founders, and e-commerce operators who are tired of spreadsheets, copy-paste work, disconnected systems, and stalled software projects.</p>
+        <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-700">Bring me in to automate operations, build Rails or Shopify systems, connect APIs, clean up data, or provide senior technical judgment when the business needs a clearer path.</p>
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <%= link_to "See what I can fix", services_path, class: "btn-secondary" %>
+          <%= link_to "View relevant work", work_path, class: "btn-secondary" %>
         </div>
-        <div class="mt-8 grid gap-3 sm:grid-cols-3">
-          <div class="rounded-xl border border-slate-200 bg-white px-4 py-3">
-            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Engagement</p>
-            <p class="mt-1 text-sm font-semibold text-slate-900">Fractional CTO</p>
+
+        <div class="proof-grid mt-8">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Best for</p>
+            <p class="mt-1 text-sm font-semibold text-slate-900">SMBs and operators</p>
           </div>
-          <div class="rounded-xl border border-slate-200 bg-white px-4 py-3">
-            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Engagement</p>
-            <p class="mt-1 text-sm font-semibold text-slate-900">Half-time CTO</p>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Common work</p>
+            <p class="mt-1 text-sm font-semibold text-slate-900">Automation, Rails, Shopify</p>
           </div>
-          <div class="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <div>
             <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Engagement</p>
-            <p class="mt-1 text-sm font-semibold text-slate-900">Senior Consultant</p>
+            <p class="mt-1 text-sm font-semibold text-slate-900">Project, retainer, or tech lead</p>
           </div>
         </div>
       </div>
-      <div class="rise-in rounded-[1.25rem] border border-slate-700/40 bg-[linear-gradient(160deg,#0f2a43,#1f4b73)] p-6 text-white shadow-[0_18px_44px_rgba(15,23,42,0.28)]">
-        <h2 class="text-xl font-bold text-white">Where I Help Most</h2>
-        <ul class="mt-4 space-y-3 text-sm text-slate-100 sm:text-base">
-          <li>Founders shipping v1 and v2 products without building a giant team.</li>
-          <li>SMBs replacing spreadsheets and repetitive manual operations.</li>
-          <li>E-commerce businesses connecting Shopify, operations, and reporting.</li>
-          <li>Finance and ops teams migrating legacy accounting systems without breaking close.</li>
-        </ul>
+
+      <div class="rise-in">
+        <%= render "inquiries/quick_form", intro: "Tell me what is manual, broken, slow, or unclear. I will help you decide whether it needs automation, a focused build, cleanup, or technical leadership." %>
       </div>
     </div>
   </div>
@@ -44,23 +40,21 @@
 
 <section class="section-block pt-0">
   <div class="section-shell">
-    <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Core Services</h2>
-    <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <% [
-        "Rails applications",
-        "Shopify/e-commerce systems",
-        "Internal tools",
-        "Workflow automation",
-        "API integrations",
-        "Data imports / cleanup",
-        "Dashboards",
-        "Replacing spreadsheets + manual processes",
-        "Pragmatic CTO/product help"
-      ].each do |service| %>
-        <div class="card p-5">
-          <p class="font-medium text-slate-800"><%= service %></p>
-        </div>
-      <% end %>
+    <div class="grid gap-6 lg:grid-cols-3">
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Automate manual operations</h2>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Replace spreadsheet work, duplicate entry, approval chaos, and repetitive handoffs with clear tools your team can use every day.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Build Rails and Shopify systems</h2>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Production Rails apps, Shopify-connected workflows, admin tools, reporting, fulfillment logic, and the glue code that keeps revenue operations moving.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Untangle technical decisions</h2>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">When you need senior technical judgment, architecture help, vendor evaluation, or roadmap sanity without turning it into corporate theater.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -68,11 +62,22 @@
 <section class="section-block bg-slate-50/80">
   <div class="section-shell">
     <div class="card border-slate-200 bg-white">
-      <h2 class="text-2xl font-bold text-slate-900">Need something useful shipped in weeks, not quarters?</h2>
-      <p class="mt-3 text-slate-700">If you have a project to build, a process to automate, or a bottleneck to fix, let's scope it and move.</p>
+      <h2 class="text-2xl font-bold text-slate-900">Common reasons people reach out</h2>
+      <div class="mt-5 grid gap-5 md:grid-cols-2">
+        <ul class="proof-list text-sm leading-relaxed text-slate-700">
+          <li>Your team is living in spreadsheets that should be a real workflow.</li>
+          <li>Your Shopify, fulfillment, accounting, or customer systems do not talk to each other.</li>
+          <li>Your Rails app matters to the business, but shipping has slowed down.</li>
+        </ul>
+        <ul class="proof-list text-sm leading-relaxed text-slate-700">
+          <li>You need a senior technical person who understands business operations.</li>
+          <li>Your data is messy enough that nobody trusts the reports.</li>
+          <li>You want practical software shipped, not a month of abstract discovery.</li>
+        </ul>
+      </div>
       <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-        <%= link_to "Tell me about your project", start_project_path, class: "btn-primary" %>
-        <%= link_to "See services", services_path, class: "btn-secondary" %>
+        <%= link_to "Explore services", services_path, class: "btn-primary" %>
+        <%= link_to "Read the FAQ", faq_path, class: "btn-secondary" %>
       </div>
     </div>
   </div>
