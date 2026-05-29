@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     set_meta(
       title: "SMB Automation, Rails, and Shopify Consultant | Doug Morgen",
-      description: "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and replace manual operations."
+      description: "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and streamline operations."
     )
   end
 

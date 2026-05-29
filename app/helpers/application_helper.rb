@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def meta_description
-    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and replace manual operations with practical software."
+    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and streamline operations with practical software."
   end
 
   def meta_robots

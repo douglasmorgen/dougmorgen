@@ -42,7 +42,7 @@
 
       <div class="order-1 card lg:order-2">
         <h2 class="text-2xl font-bold text-slate-900">Tell me about the work</h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600">Share the basics here. A rough description is fine; the point is to understand what is stuck and what better would look like.</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600">Share the basics here. A rough description is fine; the point is to understand where you want leverage and what success would look like.</p>
 
         <% if @inquiry.errors.any? %>
           <div class="mt-4 rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">
@@ -93,7 +93,7 @@
 
           <div>
             <%= f.label :message, "What should I know?", class: "field-label" %>
-            <%= f.text_area :message, class: "field-input min-h-32", required: true, placeholder: "Example: We are doing this manually today, it is slowing down operations, and we want to automate or prototype a better workflow." %>
+            <%= f.text_area :message, class: "field-input min-h-32", required: true, placeholder: "Example: We want to automate key operations, improve reporting, and prototype a better workflow for the team." %>
           </div>
 
           <div class="hidden" aria-hidden="true">
