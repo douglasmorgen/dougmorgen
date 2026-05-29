@@ -1,11 +1,11 @@
 <% source_page = local_assigns.fetch(:source_page, request.path) %>
-<% submit_label = local_assigns.fetch(:submit_label, "Ask Doug to take a look") %>
+<% submit_label = local_assigns.fetch(:submit_label, "Get started") %>
 <% intro = local_assigns.fetch(:intro, "Share the bottleneck. I will reply with the clearest next step.") %>
 <% form_started_at, form_signature = inquiry_form_timing_values %>
 
 <div class="card inquiry-card">
   <p class="pill">Quick fit check</p>
-  <h2 class="mt-4 text-2xl font-bold text-slate-900">Need a workflow fixed?</h2>
+  <h2 class="mt-4 text-2xl font-bold text-slate-900">Need help getting started?</h2>
   <p class="mt-2 text-sm leading-relaxed text-slate-600"><%= intro %></p>
 
   <%= form_with scope: :inquiry, url: inquiries_path, class: "mt-5 space-y-3" do |f| %>

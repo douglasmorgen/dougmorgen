@@ -19,7 +19,7 @@ RSpec.describe "Marketing pages", type: :request do
         expect(document.at_css("title").text).to eq(title)
         expect(document.at_css("meta[name='robots']")["content"]).to eq("index,follow,max-image-preview:large")
         expect(document.at_css("main section form")["action"]).to eq("/inquiries")
-        expect(response.body).to include("Ask Doug to take a look")
+        expect(response.body).to include("Get started")
       end
     end
   end
