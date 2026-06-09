@@ -1,6 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'Inquiries', type: :request do
+  describe 'GET /start' do
+    it 'renders the full inquiry form' do
+      get start_project_path
+
+      expect(response).to have_http_status(:ok)
+      expect(response.body).to include('Tell me about the work')
+      expect(response.body).to include('Company')
+    end
+  end
+
   describe 'POST /inquiries' do
     let(:verifier) { Rails.application.message_verifier(:inquiry_form) }
     let(:form_started_at) { 10.seconds.ago.to_i }
@@ -49,6 +59,7 @@ RSpec.describe 'Inquiries', type: :request do
 
       expect(response).to have_http_status(:unprocessable_content)
       expect(response.body).to include('Please fix the following')
+      expect(response.body).to include('Tell me about the work')
     end
 
     it 'rejects submissions that happen too quickly' do

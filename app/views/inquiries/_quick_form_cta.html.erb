@@ -1,0 +1,11 @@
+<% heading = local_assigns.fetch(:heading, "Ready to get started?") %>
+<% body = local_assigns.fetch(:body, "Tell me what you want to build, automate, or fix.") %>
+<% label = local_assigns.fetch(:label, "Get started") %>
+<% eyebrow = local_assigns.fetch(:eyebrow, "Get started") %>
+
+<div class="card">
+  <p class="pill"><%= eyebrow %></p>
+  <h2 class="mt-4 text-2xl font-bold text-slate-900"><%= heading %></h2>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600"><%= body %></p>
+  <%= link_to label, start_project_path, class: "btn-primary mt-5" %>
+</div>

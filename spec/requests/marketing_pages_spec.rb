@@ -2,6 +2,19 @@ require "rails_helper"
 
 RSpec.describe "Marketing pages", type: :request do
   describe "indexable buyer pages" do
+    it "renders the homepage with SEO metadata, nav home link, and the inquiry form" do
+      get "/"
+
+      expect(response).to have_http_status(:ok)
+      document = Nokogiri::HTML(response.body)
+
+      expect(document.at_css("title").text).to eq("SMB Automation, Rails, and Shopify Consultant | Doug Morgen")
+      expect(document.at_css("meta[name='robots']")["content"]).to eq("index,follow,max-image-preview:large")
+      expect(document.at_css("nav").text).to include("Home")
+      expect(document.at_css("main section form")["action"]).to eq("/inquiries")
+      expect(document.at_css("#quick-fit-check form")["action"]).to eq("/inquiries")
+    end
+
     {
       "/" => "SMB Automation, Rails, and Shopify Consultant | Doug Morgen",
       "/services" => "SMB Automation and Software Consulting Services | Doug Morgen",
@@ -9,8 +22,8 @@ RSpec.describe "Marketing pages", type: :request do
       "/about" => "About Doug Morgen, SMB Automation and Rails Consultant",
       "/faq" => "SMB Automation and Practical Software Help FAQ | Doug Morgen",
       "/contact" => "Talk to Doug Morgen About Automation or Software Work"
-    }.each do |path, title|
-      it "renders #{path} with SEO metadata and an inquiry form in the first section" do
+    }.except("/").each do |path, title|
+      it "renders #{path} with SEO metadata and a link to the form" do
         get path
 
         expect(response).to have_http_status(:ok)
@@ -18,7 +31,8 @@ RSpec.describe "Marketing pages", type: :request do
 
         expect(document.at_css("title").text).to eq(title)
         expect(document.at_css("meta[name='robots']")["content"]).to eq("index,follow,max-image-preview:large")
-        expect(document.at_css("main section form")["action"]).to eq("/inquiries")
+        expect(document.at_css("main section form")).to be_nil
+        expect(document.at_css("main section a[href='/start']").text).to include("Get started")
         expect(response.body).to include("Get started")
       end
     end
@@ -26,14 +40,15 @@ RSpec.describe "Marketing pages", type: :request do
 
   describe "background pages" do
     [ "/blog", "/resume" ].each do |path|
-      it "marks #{path} noindex while keeping the conversion form available" do
+      it "marks #{path} noindex while linking to the full form" do
         get path
 
         expect(response).to have_http_status(:ok)
         document = Nokogiri::HTML(response.body)
 
         expect(document.at_css("meta[name='robots']")["content"]).to eq("noindex,follow")
-        expect(document.at_css("main section form")["action"]).to eq("/inquiries")
+        expect(document.at_css("main section form")).to be_nil
+        expect(document.at_css("main section a[href='/start']").text).to include("Get started")
       end
     end
   end

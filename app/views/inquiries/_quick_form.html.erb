@@ -1,14 +1,27 @@
-<% source_page = local_assigns.fetch(:source_page, request.path) %>
+<% source_page = local_assigns.fetch(:source_page) { defined?(@inquiry) && @inquiry.present? && @inquiry.source_page.present? ? @inquiry.source_page : request.path } %>
+<% inquiry = local_assigns.fetch(:inquiry) { defined?(@inquiry) && @inquiry.present? ? @inquiry : Inquiry.new(source_page: source_page) } %>
+<% anchor_id = local_assigns[:anchor_id] %>
 <% submit_label = local_assigns.fetch(:submit_label, "Get started") %>
 <% intro = local_assigns.fetch(:intro, "Share your goals and context. I will reply with the clearest next step.") %>
 <% form_started_at, form_signature = inquiry_form_timing_values %>
 
-<div class="card inquiry-card">
+<%= tag.div id: anchor_id, class: "card inquiry-card scroll-mt-24" do %>
   <p class="pill">Quick fit check</p>
   <h2 class="mt-4 text-2xl font-bold text-slate-900">Need help getting started?</h2>
   <p class="mt-2 text-sm leading-relaxed text-slate-600"><%= intro %></p>
 
-  <%= form_with scope: :inquiry, url: inquiries_path, class: "mt-5 space-y-3" do |f| %>
+  <% if inquiry.errors.any? %>
+    <div class="mt-4 rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">
+      <p class="font-semibold">Please fix the following:</p>
+      <ul class="mt-2 list-disc pl-5">
+        <% inquiry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_with model: inquiry, url: inquiries_path, class: "mt-5 space-y-3" do |f| %>
     <div class="grid gap-3 sm:grid-cols-2">
       <div>
         <%= f.label :name, "Name", class: "field-label" %>
@@ -39,4 +52,4 @@
   <% end %>
 
   <p class="mt-4 text-xs leading-relaxed text-slate-500">Best fit: SMBs, founders, and operators who want stronger workflows, clearer reporting, and software that keeps pace with growth.</p>
-</div>
+<% end %>

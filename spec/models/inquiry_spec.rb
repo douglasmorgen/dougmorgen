@@ -48,4 +48,9 @@ RSpec.describe Inquiry, type: :model do
     inquiry.valid?
     expect(inquiry.status).to eq('new')
   end
+
+  it 'defaults source page to start' do
+    inquiry.valid?
+    expect(inquiry.source_page).to eq('/start')
+  end
 end
