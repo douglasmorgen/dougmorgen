@@ -12,7 +12,7 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(source_page: request.path)
     set_meta(
       title: "Ask Doug Morgen About Automation or Software Work",
-      description: "Tell Doug Morgen about your SMB automation, Rails, Shopify, internal tools, API integration, data workflow, or technical leadership problem."
+      description: "Tell Doug Morgen what you want to build, automate, or fix and get next steps."
     )
     set_form_protection_values
   end
@@ -65,7 +65,7 @@ class InquiriesController < ApplicationController
   def render_inquiry_form_error(status:)
     set_meta(
       title: "Ask Doug Morgen About Automation or Software Work",
-      description: "Tell Doug Morgen about your SMB automation, Rails, Shopify, internal tools, API integration, data workflow, or technical leadership problem."
+      description: "Tell Doug Morgen what you want to build, automate, or fix and get next steps."
     )
     set_form_protection_values
     render :new, status: status

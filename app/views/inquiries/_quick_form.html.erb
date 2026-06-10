@@ -2,11 +2,11 @@
 <% inquiry = local_assigns.fetch(:inquiry) { defined?(@inquiry) && @inquiry.present? ? @inquiry : Inquiry.new(source_page: source_page) } %>
 <% anchor_id = local_assigns[:anchor_id] %>
 <% submit_label = local_assigns.fetch(:submit_label, "Get started") %>
-<% intro = local_assigns.fetch(:intro, "Share your goals and context. I will reply with the clearest next step.") %>
+<% intro = local_assigns.fetch(:intro, "Tell me what you want to build, automate, or fix. I will send next steps.") %>
 <% form_started_at, form_signature = inquiry_form_timing_values %>
 
 <%= tag.div id: anchor_id, class: "card inquiry-card scroll-mt-24" do %>
-  <p class="pill">Quick fit check</p>
+  <p class="pill">Start here</p>
   <h2 class="mt-4 text-2xl font-bold text-slate-900">Need help getting started?</h2>
   <p class="mt-2 text-sm leading-relaxed text-slate-600"><%= intro %></p>
 
@@ -35,8 +35,8 @@
     </div>
 
     <div>
-      <%= f.label :message, "What would you like to improve?", class: "field-label" %>
-      <%= f.text_area :message, class: "field-input min-h-24", required: true, placeholder: "Example: We want Shopify, accounting, and operations systems to stay in sync and reduce weekly admin work." %>
+      <%= f.label :message, "What do you want to build, automate, or fix?", class: "field-label" %>
+      <%= f.text_area :message, class: "field-input min-h-24", required: true, placeholder: "Example: We want Shopify, accounting, and operations to stay in sync and cut down weekly admin work." %>
     </div>
 
     <div class="hidden" aria-hidden="true">
@@ -51,5 +51,5 @@
     <%= f.submit submit_label, class: "btn-primary w-full" %>
   <% end %>
 
-  <p class="mt-4 text-xs leading-relaxed text-slate-500">Best fit: SMBs, founders, and operators who want stronger workflows, clearer reporting, and software that keeps pace with growth.</p>
+  <p class="mt-4 text-xs leading-relaxed text-slate-500">Best fit: SMBs, founders, and operators who need clearer workflows, better reporting, or software that can keep up with the business.</p>
 <% end %>

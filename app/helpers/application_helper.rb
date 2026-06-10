@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def meta_description
-    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen helps SMBs, founders, and e-commerce operators automate workflows, build Rails and Shopify systems, connect APIs, and streamline operations with practical software."
+    content_for(:meta_description).presence || @meta_description.presence || "Doug Morgen helps SMBs, founders, and e-commerce teams automate manual work, build Rails and Shopify tools, connect APIs, and clean up operations."
   end
 
   def meta_robots
@@ -34,7 +34,7 @@ module ApplicationHelper
       url: "https://dougmorgen.com",
       sameAs: [ linkedin_url ],
       jobTitle: "SMB Automation Consultant and Senior Rails Engineer",
-      description: "Software consultant, automation partner, senior Rails engineer, and ongoing technical partner for SMBs, founders, e-commerce companies, and operations-heavy teams.",
+      description: "Software consultant and senior Rails engineer helping SMBs, founders, and e-commerce teams automate manual work, build useful tools, connect APIs, and clean up operations.",
       knowsAbout: [
         "Business process automation",
         "SMB operations software",
