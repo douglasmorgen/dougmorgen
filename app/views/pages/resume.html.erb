@@ -1,24 +1,41 @@
-<% content_for :meta_title, "Doug Morgen Background | SMB Automation and Rails Engineer" %>
-<% content_for :meta_description, "Background for Doug Morgen: automation, senior Rails engineering, Shopify systems, accounting migrations, e-commerce operations, and software delivery." %>
-<% content_for :meta_robots, "noindex,follow" %>
+<% content_for :meta_title, "Doug Morgen Resume | CTO and Senior Full-Stack Engineer" %>
+<% content_for :meta_description, "Resume for Doug Morgen: CTO, senior full-stack engineer, Rails, AI-native products, accounting systems, logistics, e-commerce, and infrastructure." %>
 
 <section class="section-block">
   <div class="section-shell">
     <div class="hero-grid">
       <div class="rise-in">
-        <p class="pill">Background</p>
-        <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Background for people evaluating software help.</h1>
-        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">This page is here if you want more detail on my experience after you already know what kind of help you need.</p>
-        <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-700">For search, the services, work, FAQ, and home pages are better entry points, so this page is intentionally marked noindex.</p>
+        <p class="pill">Resume</p>
+        <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Doug Morgen</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">Full-stack engineer and former founder with deep product and customer focus, strong systems architecture experience, and a proven track record of building and scaling high-revenue businesses.</p>
+        <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+          San Francisco, CA · <%= link_to "dougmorgen.com", root_path, class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "arrafund.com", "https://www.arrafund.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "finance.dougmorgen.com", "https://finance.dougmorgen.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "linkedin.com/in/dougmorgen", linkedin_url, target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %>
+        </p>
 
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-          <%= link_to "See services", services_path, class: "btn-secondary" %>
-          <%= link_to "Connect on LinkedIn", linkedin_url, target: "_blank", rel: "noopener", class: "btn-secondary" %>
+          <%= link_to "Download resume", "/doug-morgen-resume.pdf", class: "btn-primary", download: "doug-morgen-resume.pdf" %>
+          <%= link_to "View work", work_path, class: "btn-secondary" %>
         </div>
       </div>
 
       <div class="rise-in">
-        <%= render "inquiries/quick_form_cta" %>
+        <article class="card">
+          <h2 class="text-xl font-bold text-slate-900">Resume snapshot</h2>
+          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
+            <div>
+              <dt class="font-semibold text-slate-900">Current roles</dt>
+              <dd class="mt-1 text-slate-700">CTO at Arrafund and Homebrand, building Rails 8 products across AI workflows, fintech, creator monetization, property operations, and production infrastructure.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-900">Core stack</dt>
+              <dd class="mt-1 text-slate-700">Ruby on Rails, Turbo, Stimulus, PostgreSQL, Redis, Tailwind CSS, JavaScript, React, React Native, Next.js, TypeScript, Prisma, AWS, Heroku, Docker, CloudFront, GitHub Actions, and Cloudflare.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-slate-900">Background</dt>
+              <dd class="mt-1 text-slate-700">Founder, CTO, senior engineer, and e-commerce operator across startups, logistics, accounting, AI-native document systems, and high-volume online retail.</dd>
+            </div>
+          </dl>
+        </article>
       </div>
     </div>
   </div>
@@ -26,21 +43,98 @@
 
 <section class="section-block pt-0">
   <div class="section-shell max-w-4xl">
-    <div class="space-y-5">
+    <div class="space-y-6">
       <article class="card">
-        <h2 class="text-xl font-bold text-slate-900">Core focus</h2>
-        <p class="mt-3 text-slate-700">Automation, Rails applications, Shopify and e-commerce operations, internal tools, API integrations, data workflows, technical cleanup, and ongoing technical support.</p>
+        <h2 class="text-xl font-bold text-slate-900">Professional summary</h2>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Full-stack engineer and former founder with deep product and customer focus, strong systems architecture experience, and a proven track record of building and scaling high-revenue businesses. Adept at learning new technologies, leading engineering initiatives, and architecting and building scalable, reliable systems.</p>
       </article>
 
       <article class="card">
-        <h2 class="text-xl font-bold text-slate-900">Selected projects</h2>
-        <ul class="mt-3 space-y-3 text-slate-700">
-          <li><strong>Homebrand:</strong> Rails platform for property document ingestion, OCR/search, cited AI answers, and maintenance workflows.</li>
-          <li><strong>ArraFund Commission Platform:</strong> Connected Rails and Shopify system for commission tracking, campaign order ingestion, webhook synchronization, and payout operations.</li>
-          <li><strong>BrightGo Accounting Migration:</strong> Hybrid ERP accounting and operations system with ledger migration pipelines, strict idempotency, and penny-perfect reconciliation.</li>
-          <li><strong>EasyPost Scale:</strong> Billing and logistics systems supporting billions in shipping volume and high-throughput carrier workflows.</li>
-          <li><strong>Cellular Country:</strong> Built and operated an $8M/year e-commerce business with custom inventory, fulfillment, and CRM systems.</li>
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">February 2024 - Present</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">CTO · Arrafund</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Founded and built a global, multi-currency creator monetization platform connecting influencers and businesses using Ruby on Rails 8, Turbo, Stimulus, PostgreSQL, Redis, Tailwind CSS, and JavaScript.</li>
+          <li>Architected high-performance Rails applications with aggressive performance targets, optimizing ActiveRecord, PostgreSQL queries, caching, and ActiveStorage.</li>
+          <li>Designed and implemented a polymorphic social graph supporting comments, likes, follows, shares, notifications, and user engagement features.</li>
+          <li>Built a Shopify application using Next.js, TypeScript, Prisma, PostgreSQL, and Render for real-time affiliate earnings and commission tracking.</li>
+          <li>Implemented Stripe and Wise financial integrations including OAuth flows, webhook processing, encrypted credential storage, and payment automation.</li>
+          <li>Built high-volume webhook ingestion pipelines for Shopify and WordPress with HMAC verification, idempotency guarantees, retry handling, and asynchronous processing.</li>
+          <li>Designed a multi-currency commission and attribution engine tied directly to Shopify order lifecycle events and affiliate performance.</li>
+          <li>Deployed and operated infrastructure across AWS, Heroku, Docker, CloudFront, Redis, PostgreSQL, GitHub Actions, and Cloudflare services.</li>
+          <li>Owned end-to-end product development including architecture, backend systems, frontend development, infrastructure, security, payments, analytics, and third-party integrations.</li>
         </ul>
+      </article>
+
+      <article class="card">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">March 2026 - Present</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">CTO · Homebrand</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Served as CTO and sole software engineer for Homebrand, architecting, building, and deploying the full Rails 8 product across backend, frontend, data model, AI pipelines, infrastructure, and internal tooling.</li>
+          <li>Built and deployed an AI-native home operations platform on Heroku and AWS, helping property owners manage documents, maintenance, contractors, utilities, house materials, teammate access, and property-specific Q&A.</li>
+          <li>Designed and implemented the full application stack: Rails 8, PostgreSQL, Redis/Sidekiq, Active Storage/S3, Devise authentication, Turbo/Stimulus UI, Anthropic extraction/answering, and OpenAI transcription.</li>
+          <li>Built the complete AI ingestion system, including OCR-first parsing, document classification, structured extraction, receipt/manual/warranty/policy processing, audio/video transcription, evidence indexing, and background job orchestration.</li>
+          <li>Created Kovu, an evidence-grounded AI assistant that retrieves from uploaded documents, property records, materials, maintenance logs, contractors, and utilities to answer homeowner questions.</li>
+          <li>Developed the full property-scoped authorization model, including multi-property support, owner/teammate roles, invitations, beta-gated signup, admin approval controls, and AI policy consent.</li>
+          <li>Shipped all core product workflows end-to-end: document upload, receipt export, contractor matching, house material inventory, maintenance planning and completion history, utility tracking, property profiles, settings, and admin beta access.</li>
+          <li>Owned production deployment and operations across Heroku and AWS, including managed runtime configuration, background workers, Redis-backed queues, PostgreSQL, SMTP mail, and S3-backed file storage.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">April 2025 - January 2026</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">Senior Full-Stack Engineer · BrightGo</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Architected a hybrid ERP accounting and operations platform integrating legacy ERP data with Ruby on Rails/PostgreSQL, React, Chakra UI, and LayerFi's accounting APIs and UI components, delivering a modernized system for companies managing $20M+ in annual revenue.</li>
+          <li>Designed and built a true job-costed payroll system, enabling per-job labor tracking, real-time cost attribution, and accurate payroll-to-ledger reconciliation for operational and financial reporting.</li>
+          <li>Modernized the React Native mobile app to support complex schedule editing, multi-shift workflows, and real-time validation for field employees and supervisors.</li>
+          <li>Engineered high-throughput data-migration and reconciliation pipelines to import legacy ledgers with penny-perfect accuracy, enforcing idempotency, globally unique external IDs, and strict double-entry balance validation.</li>
+          <li>Normalized and enforced accounting account type/subtype hierarchies during migration, guaranteeing full compliance with LayerFi's ledger constraints and eliminating classification errors that previously blocked financial close.</li>
+          <li>Delivered executive-grade React dashboards with live P&L, vendor, and customer detail views, combining BrightGo's domain models with LayerFi's real-time financial components, optimized with SWR and matched to pixel-perfect Figma specifications.</li>
+          <li>Implemented a high-performance, role-based permissions system using Rails policies and React front-end gating, securing sensitive accounting workflows while sustaining sub-50ms authorization checks at scale.</li>
+          <li>Designed production-grade background job orchestration for financial workflows including imports, payroll calculation, and reporting synchronization.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Oct 2019 - Nov 2023</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">Senior Software Engineer · EasyPost (YC 2013)</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Led architecture for mission-critical billing systems handling $8 billion in shipping volume for UPS, FedEx, and DHL.</li>
+          <li>Developed high-throughput microservices and optimized MySQL database partitions for performance and especially maintainability.</li>
+          <li>Designed and launched a QR code endpoint that generated 100k return labels a day in collaboration with UPS and key stakeholders.</li>
+          <li>Standardized default carrier billing integrations by building reusable libraries for scalable, cross-platform billing logic.</li>
+          <li>Built and extended business-critical Ruby on Rails API services powering logistics and shipping infrastructure.</li>
+          <li>Migrated 15 services from the Rails monolith to Python Flask and Django microservice architecture, improving reliability and developer productivity.</li>
+          <li>Led development of in-house UPS DAP shipping and billing infrastructure, handling $15M in annual shipping volume.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">2005 - 2019</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">Founder, CTO, Owner & Lead Engineer · Cellular Country</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Built and scaled an $8M/year B2C eCommerce business, developing enterprise-level inventory, fulfillment, accounting, and CRM systems in PHP and MySQL.</li>
+          <li>Designed and implemented an AI real-time dynamic pricing model to maximize revenue on every SKU sold.</li>
+          <li>Increased conversions on product pages, product listing pages, checkout page, and confirmation page by anywhere from 10 to 30 percent using A/B and multivariate tests with Google Website Optimizer and Visual Website Optimizer.</li>
+          <li>Led SEO and SEM strategies, driving highly profitable organic growth to 5,000 users per day and profitable paid traffic growth to 3,000 users a day.</li>
+          <li>Managed supply chain and inventory automation of 10,000 unique SKUs and 2,000 active SKUs at any time, ensuring real-time tracking and seamless fulfillment.</li>
+          <li>Oversaw UX development, leading multiple remote engineers and designers to meet aggressive deadlines.</li>
+          <li>Responsible for 24/7/365 99.9 percent uptime DevOps on bare-metal Linux servers.</li>
+          <li>Managed an in-house staff of 10 employees handling all customer service and operations tasks.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2 class="text-xl font-bold text-slate-900">Education</h2>
+        <div class="mt-4 space-y-4 text-sm leading-relaxed text-slate-700">
+          <div>
+            <p class="font-semibold text-slate-900">M.S. Mechanical Engineering, University of California, San Diego</p>
+            <p class="mt-1">Developed novel imaging and chemical composition models to calculate flame temperatures.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900">B.S. Engineering Science & Mechanics, Virginia Tech</p>
+          </div>
+        </div>
       </article>
     </div>
   </div>

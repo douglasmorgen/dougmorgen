@@ -36,8 +36,8 @@ class PagesController < ApplicationController
 
   def resume
     set_meta(
-      title: "Doug Morgen Background | SMB Automation and Rails Engineer",
-      description: "Background for Doug Morgen: automation, senior Rails engineering, Shopify systems, accounting migrations, e-commerce operations, and software delivery."
+      title: "Doug Morgen Resume | CTO and Senior Full-Stack Engineer",
+      description: "Resume for Doug Morgen: CTO, senior full-stack engineer, Rails, AI-native products, accounting systems, logistics, e-commerce, and infrastructure."
     )
   end
 
