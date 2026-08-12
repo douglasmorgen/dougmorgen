@@ -47,7 +47,7 @@ RSpec.describe "Marketing pages", type: :request do
 
       expect(response).to have_http_status(:ok)
       document = Nokogiri::HTML(response.body)
-      download_link = document.at_css("main a[href='/doug-morgen-resume.pdf'][download='doug-morgen-resume.pdf']")
+      download_link = document.at_css("main a[href='/doug-morgen-resume-new.pdf'][download='doug-morgen-resume-new.pdf']")
 
       expect(download_link.text).to include("Download resume")
       expect(response.body).to include("CTO · Homebrand")
@@ -57,7 +57,7 @@ RSpec.describe "Marketing pages", type: :request do
       expect(response.body).not_to include("mailto:")
       expect(response.body).not_to include("(858) 405-1202")
       expect(response.body).not_to include("tel:")
-      expect(Rails.root.join("public/doug-morgen-resume.pdf")).to exist
+      expect(Rails.root.join("public/doug-morgen-resume-new.pdf")).to exist
     end
   end
 
