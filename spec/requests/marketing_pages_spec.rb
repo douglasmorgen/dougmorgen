@@ -47,9 +47,12 @@ RSpec.describe "Marketing pages", type: :request do
 
       expect(response).to have_http_status(:ok)
       document = Nokogiri::HTML(response.body)
-      download_link = document.at_css("main a[href='/doug-morgen-resume.pdf'][download='doug-morgen-resume.pdf']")
+      download_link = document.at_css("main a[href='/doug-morgen-resume-typescript-v4.pdf'][download='doug-morgen-resume-typescript-v4.pdf']")
 
       expect(download_link.text).to include("Download resume")
+      expect(response.body).to include("Full-Stack TypeScript Application")
+      expect(response.body).to include("Bun, Effect, React, TanStack Router")
+      expect(response.body).to include("March 2026 - July 2026")
       expect(response.body).to include("CTO · Homebrand")
       expect(response.body).to include("April 2025 - January 2026")
       expect(response.body).to include("B.S. Engineering Science")
@@ -58,6 +61,7 @@ RSpec.describe "Marketing pages", type: :request do
       expect(response.body).not_to include("(858) 405-1202")
       expect(response.body).not_to include("tel:")
       expect(Rails.root.join("public/doug-morgen-resume.pdf")).to exist
+      expect(Rails.root.join("public/doug-morgen-resume-typescript-v4.pdf")).to exist
     end
   end
 

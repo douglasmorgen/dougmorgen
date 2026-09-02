@@ -1,5 +1,5 @@
 <% content_for :meta_title, "Doug Morgen Resume | CTO and Senior Full-Stack Engineer" %>
-<% content_for :meta_description, "Resume for Doug Morgen: CTO, senior full-stack engineer, Rails, AI-native products, accounting systems, logistics, e-commerce, and infrastructure." %>
+<% content_for :meta_description, "Resume for Doug Morgen: CTO and senior full-stack engineer building TypeScript, Rails, AI-native, financial, logistics, and e-commerce systems." %>
 
 <section class="section-block">
   <div class="section-shell">
@@ -9,11 +9,11 @@
         <h1 class="mt-5 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Doug Morgen</h1>
         <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">Full-stack engineer and former founder with deep product and customer focus, strong systems architecture experience, and a proven track record of building and scaling high-revenue businesses.</p>
         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
-          San Francisco, CA · <%= link_to "dougmorgen.com", root_path, class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "arrafund.com", "https://www.arrafund.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "finance.dougmorgen.com", "https://finance.dougmorgen.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "linkedin.com/in/dougmorgen", linkedin_url, target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %>
+          San Francisco, CA · <%= link_to "node.dougmorgen.com", "https://node.dougmorgen.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "dougmorgen.com", root_path, class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "arrafund.com", "https://www.arrafund.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "finance.dougmorgen.com", "https://finance.dougmorgen.com", target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %> · <%= link_to "linkedin.com/in/dougmorgen", linkedin_url, target: "_blank", rel: "noopener", class: "font-semibold text-blue-700 hover:text-blue-800" %>
         </p>
 
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-          <%= link_to "Download resume", "/doug-morgen-resume.pdf", class: "btn-primary", download: "doug-morgen-resume.pdf" %>
+          <%= link_to "Download resume", "/doug-morgen-resume-typescript-v4.pdf", class: "btn-primary", download: "doug-morgen-resume-typescript-v4.pdf" %>
           <%= link_to "View work", work_path, class: "btn-secondary" %>
         </div>
       </div>
@@ -23,12 +23,12 @@
           <h2 class="text-xl font-bold text-slate-900">Resume snapshot</h2>
           <dl class="mt-5 space-y-4 text-sm leading-relaxed">
             <div>
-              <dt class="font-semibold text-slate-900">Current roles</dt>
-              <dd class="mt-1 text-slate-700">CTO at Arrafund and Homebrand, building Rails 8 products across AI workflows, fintech, creator monetization, property operations, and production infrastructure.</dd>
+              <dt class="font-semibold text-slate-900">Current work</dt>
+              <dd class="mt-1 text-slate-700">CTO at Arrafund and builder of a full-stack TypeScript application spanning strongly typed APIs, secure authentication, account-scoped data, and production infrastructure.</dd>
             </div>
             <div>
               <dt class="font-semibold text-slate-900">Core stack</dt>
-              <dd class="mt-1 text-slate-700">Ruby on Rails, Turbo, Stimulus, PostgreSQL, Redis, Tailwind CSS, JavaScript, React, React Native, Next.js, TypeScript, Prisma, AWS, Heroku, Docker, CloudFront, GitHub Actions, and Cloudflare.</dd>
+              <dd class="mt-1 text-slate-700">TypeScript, Bun, Effect, React, TanStack Router, Tailwind CSS, shadcn/ui, Drizzle ORM, PostgreSQL, Ruby on Rails, Turbo, Stimulus, Next.js, Docker, Kamal, AWS, Heroku, and Cloudflare.</dd>
             </div>
             <div>
               <dt class="font-semibold text-slate-900">Background</dt>
@@ -50,6 +50,17 @@
       </article>
 
       <article class="card">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">2026</p>
+        <h2 class="mt-2 text-xl font-bold text-slate-900">Full-Stack TypeScript Application</h2>
+        <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
+          <li>Built a full-stack TypeScript application using Bun, Effect, React, TanStack Router, Tailwind CSS, shadcn/ui, Drizzle ORM, and PostgreSQL.</li>
+          <li>Architected a strongly typed Effect API with shared schemas, dependency-injected services, tagged domain errors, boundary validation, and automated lint, typecheck, test, and build gates.</li>
+          <li>Implemented secure authentication and account-scoped data access with email/password, GitHub and Google OAuth, verified-email account linking, reCAPTCHA, rate limiting, and concurrency-safe resource limits.</li>
+          <li>Containerized and deployed the application with Docker and Kamal, automating pre-deployment database migrations and isolating PostgreSQL behind an Apache TLS reverse proxy.</li>
+        </ul>
+      </article>
+
+      <article class="card">
         <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">February 2024 - Present</p>
         <h2 class="mt-2 text-xl font-bold text-slate-900">CTO · Arrafund</h2>
         <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
@@ -66,7 +77,7 @@
       </article>
 
       <article class="card">
-        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">March 2026 - Present</p>
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">March 2026 - July 2026</p>
         <h2 class="mt-2 text-xl font-bold text-slate-900">CTO · Homebrand</h2>
         <ul class="proof-list mt-4 text-sm leading-relaxed text-slate-700">
           <li>Served as CTO and sole software engineer for Homebrand, architecting, building, and deploying the full Rails 8 product across backend, frontend, data model, AI pipelines, infrastructure, and internal tooling.</li>
